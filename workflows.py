@@ -54,17 +54,8 @@ class VideoProcessingWorkflow:
         ]
 
         # Fan-in: wait for all of them to finish
-        # return_exceptions=False will raise on first failure (default behavior)
+        # return_exceptions=True will allow all to complete, even if some fail
         analysis_results = await asyncio.gather(*analyze_shots, return_exceptions=True)
-
-        # for scene in scene_paths:
-        #     result = await workflow.execute_activity(
-        #         analyze_shot,
-        #         scene,
-        #         schedule_to_close_timeout=timedelta(seconds=9),
-        #         retry_policy=analyze_retry,
-        #     )
-        #     analysis_results.append(result)
 
         return (
             f"Video processing completed with result code: {result_code}. "
