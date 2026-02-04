@@ -8,8 +8,8 @@ This repo demonstrates a Temporal workflow that:
 
 ### Contents
 - [`workflows.py`](./workflows.py): contains the Temporal workflow `VideoProcessingWorkflow`
-- [`activities.py`](./activities.py): contains the Temporal activites `detect_shots`, `split_shots`, and `analyze_shot`
-- [`worker.py`](./worker.py): contains the Temporal worker configuraiton responsible for the above workflows and activites
+- [`activities.py`](./activities.py): contains the Temporal activities `detect_shots`, `split_shots`, and `analyze_shot`
+- [`worker.py`](./worker.py): contains the Temporal worker configuration responsible for the above workflows and activites
 - [`starter.py`](./starter.py): contains a starter function to execute the `VideoProcessingWorkflow` with a provided video file
 - [`analysis_server.py`](./analysis_server.py): a local video analysis server providing descriptive keywords for provided video clips via FastAPI
 
