@@ -57,7 +57,7 @@ async def split_shots(input: SplitterConfig) -> tuple[int, list]:
 async def analyze_shot(scene_path: str) -> str:
     """
     Calls local analysis service to analyze the full clip.
-    Returns JSON string: {description, keywords[12], evidence{...}}
+    Returns JSON up to 10 keywords describing the clip.
     """
     clip_uri = Path(scene_path).as_uri()
 
