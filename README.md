@@ -1,4 +1,4 @@
-# Temporal Video Analysis Workflow example
+# Video Analysis Temporal Workflow example
 
 ## Overview
 This repo demonstrates a Temporal workflow that:
