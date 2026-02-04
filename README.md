@@ -56,3 +56,4 @@ This repo demonstrates a Temporal workflow that:
     ```bash
     python starter.py $VIDEOPATH
     ```
+1. The workflow will create a subfolder named after your input video filename, and place all the detected shots within. Each shot is analyzed for its contents and JSON output is placed alongside the clips in this subfolder.
