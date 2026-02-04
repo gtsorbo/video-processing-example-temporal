@@ -18,9 +18,13 @@ This repo demonstrates a Temporal workflow that:
 - FFmpeg installed and on your PATH (used by `scenedetect` to split clips)
 > [!TIP]
 > On Linux:
-> `sudo apt install ffmpeg `
+> ```bash
+> sudo apt install ffmpeg 
+> ```
 > Mac:
+> ```bash
 > `brew install ffmpeg`
+> ```
 
 ## Quickstart
 1. Clone this repo and open the resulting directory
