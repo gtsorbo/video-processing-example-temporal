@@ -314,7 +314,7 @@ def _detect_object_keywords(frames: List[np.ndarray]) -> Tuple[List[str], Dict]:
 
     evidence = {
         "yolo_mode": os.getenv("YOLO_MODE", "coco").lower().strip(),
-        "yolo_model": os.getenv("YOLO_MODEL", ("yolov8x.pt" if os.getenv("YOLO_MODE", "coco").lower().strip() != "world" else "yolov8x-world.pt")),
+        "yolo_model": os.getenv("YOLO_MODEL", ("yolov8l.pt" if os.getenv("YOLO_MODE", "coco").lower().strip() != "world" else "yolov8l-world.pt")),
         "world_classes_applied": bool(_yolo_world_applied),
         "conf_threshold": conf_th,
         "detect_max_width": max_w,
