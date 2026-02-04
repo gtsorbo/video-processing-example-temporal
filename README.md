@@ -16,11 +16,11 @@ This repo demonstrates a Temporal workflow that:
 ## Prerequisites
 - Python 3.10+
 - FFmpeg installed and on your PATH (used by `scenedetect` to split clips)
-    > [!TIP]
-    > On Linux:
-    > `sudo apt install ffmpeg `
-    > Mac:
-    > `brew install ffmpeg`
+> [!TIP]
+> On Linux:
+> `sudo apt install ffmpeg `
+> Mac:
+> `brew install ffmpeg`
 
 ## Quickstart
 1. Clone this repo and open the resulting directory
