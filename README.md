@@ -14,16 +14,14 @@ This repo demonstrates a Temporal workflow that:
 - `analysis_server.py`: a local video analysis server providing descriptive keywords for provided video clips via FastAPI
 
 ## Prerequisites
-- Python 3.10+
-- FFmpeg installed and on your PATH (used by `scenedetect` to split clips)
+- [Python 3.10+](https://www.python.org)
+- [Temporal CLI](https://docs.temporal.io/cli)
+- [FFmpeg](https://www.ffmpeg.org/download.html) (used by `scenedetect` to split clips)
 > [!TIP]
-> On Linux:
-> ```bash
-> sudo apt install ffmpeg 
-> ```
 > Mac:
 > ```bash
-> `brew install ffmpeg`
+> brew install temporal
+> brew install ffmpeg
 > ```
 
 ## Quickstart
