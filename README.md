@@ -17,6 +17,7 @@ This repo demonstrates a Temporal workflow that:
 - [Python 3.10+](https://www.python.org)
 - [Temporal CLI](https://docs.temporal.io/cli)
 - [FFmpeg](https://www.ffmpeg.org/download.html) (used by `scenedetect` to split clips)
+- A video file (mp4) to test the workflow on. You can bring your own or [download an example here](https://archive.org/details/turner_video_14232). For demonstration purposes, a movie trailer works great.
 > [!TIP]
 > Mac:
 > ```bash
@@ -36,10 +37,6 @@ This repo demonstrates a Temporal workflow that:
     source env/bin/activate
     pip install -r requirements.txt
     ```
-1. Set the environment variable for your video filepath:
-    ```bash
-    export $VIDEOPATH=/path/to/video.mp4
-    ```
 1. In a new terminal, start the analysis API:
     ```bash
     uvicorn analysis_server:app --host 127.0.0.1 --port 8008
@@ -52,8 +49,8 @@ This repo demonstrates a Temporal workflow that:
     ```bash
     python worker.py
     ```
-1. In another new terminal, execute the workflow with a local video path:
+1. In another new terminal, set the environment variable for your video filepath, then execute the workflow with a local video path:
     ```bash
-    python starter.py $VIDEOPATH
+    python starter.py /path/to/video.mp4
     ```
 1. The workflow will create a subfolder named after your input video filename, and place all the detected shots within. Each shot is analyzed for its contents and JSON output is placed alongside the clips in this subfolder.
