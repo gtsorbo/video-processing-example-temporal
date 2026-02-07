@@ -12,6 +12,7 @@ This repo demonstrates a Temporal workflow that:
 - [`worker.py`](./worker.py): contains the Temporal worker configuration responsible for the above workflows and activites
 - [`starter.py`](./starter.py): contains a starter function to execute the `VideoProcessingWorkflow` with a provided video file
 - [`analysis_server.py`](./analysis_server.py): a local video analysis server providing descriptive keywords for provided video clips via FastAPI
+- [`before/`](./before/): folder with original codebase, with original [`scene_processing.py`](./before/scene_processing/scene_processing.py) and [`video_genai.py`](./before/video_genai/video_genai.py) functions
 
 ## Prerequisites
 - [Python 3.10+](https://www.python.org)
