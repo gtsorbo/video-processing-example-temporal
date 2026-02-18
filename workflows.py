@@ -15,6 +15,7 @@ class VideoProcessingWorkflow:
         retry_policy = RetryPolicy(
             maximum_attempts=3,
             maximum_interval=timedelta(seconds=10),
+            non_retryable_error_types=["VideoOpenFailure"],
         )
 
         analyze_retry = RetryPolicy(
@@ -28,6 +29,7 @@ class VideoProcessingWorkflow:
             detect_shots,
             video,
             schedule_to_close_timeout=timedelta(seconds=60),
+            retry_policy=retry_policy
         )
 
         # Split shots
@@ -38,7 +40,8 @@ class VideoProcessingWorkflow:
                 scene_list=scene_list,
             ),
             schedule_to_start_timeout=timedelta(seconds=10),
-            schedule_to_close_timeout=timedelta(seconds=300)
+            schedule_to_close_timeout=timedelta(seconds=300),
+            retry_policy=retry_policy
         )
 
         # Fan-out: start all analyze_shot activities without awaiting them yet
